@@ -18,6 +18,12 @@
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="theme-color" content="#E2DCD9" />
 <link rel="icon" href="favicon.png" type="image/png" />
+<!-- 첫 화면 끊김 방지: 폰트 · 표지 이미지를 먼저 받아둠 -->
+<link rel="preload" href="gh-caslon.woff2" as="font" type="font/woff2" crossorigin />
+<link rel="preload" href="gh-hanken.woff2" as="font" type="font/woff2" crossorigin />
+<link rel="preload" href="gh-pretendard.woff2" as="font" type="font/woff2" crossorigin />
+<link rel="preload" href="gh-cover.webp" as="image" />
+<link rel="preload" href="gh-word.webp" as="image" />
 <!-- 시안 도메인 = girin-sample.lgt3232.workers.dev. 고객 인계 시 grep lgt3232 → canonical·og:url·og:image·JSON-LD url/image 치환 -->
 <script type="application/ld+json">
 {
@@ -276,19 +282,38 @@ h1,h2,h3,p{ margin:0; }
 
 <script>
 (function(){
-  /* 리빌 */
+  /* 리빌: 사진이 다 받아진 뒤에만 페이드 (받는 중에 투명 → 사진이 뚝 튀어나오는 끊김 방지) */
+  function show(el){
+    if(el._wait) return;
+    var imgs=el.tagName==='IMG'?[el]:[].slice.call(el.querySelectorAll('img'));
+    var left=imgs.filter(function(i){ return !i.complete; });
+    if(!left.length){ el.classList.add('in'); return; }
+    el._wait=true; var n=left.length;
+    var done=function(){ if(--n<=0) el.classList.add('in'); };
+    left.forEach(function(i){
+      if(i.loading==='lazy') i.loading='eager';
+      i.addEventListener('load',done,{once:true}); i.addEventListener('error',done,{once:true});
+    });
+    setTimeout(function(){ el.classList.add('in'); },2500); /* 안전망 */
+  }
   var pending=[].slice.call(document.querySelectorAll('.reveal'));
-  var t=setInterval(function(){
+  function tick(){
     if(!pending.length){ clearInterval(t); return; }
     if(window.innerHeight + window.pageYOffset >= document.documentElement.scrollHeight - 4){
-      pending.forEach(function(el){ el.classList.add('in'); }); pending=[]; return;
+      pending.forEach(show); pending=[]; return;
     }
     var line=window.innerHeight*0.92;
     pending=pending.filter(function(el){
-      if(el.getBoundingClientRect().top < line){ el.classList.add('in'); return false; }
+      if(el.getBoundingClientRect().top < line){ show(el); return false; }
       return true;
     });
-  },120);
+  }
+  var t;
+  /* 폰트가 바뀌며 글자가 한 번 더 움직이는 것 방지: 폰트 준비 후 첫 리빌 (최대 1.2초 대기) */
+  var started=false;
+  function start(){ if(started) return; started=true; tick(); t=setInterval(tick,120); }
+  if(document.fonts && document.fonts.ready){ document.fonts.ready.then(start); }
+  setTimeout(start,1200);
   /* 앵커 스크롤 */
   var head=document.querySelector('.site-head');
   [].forEach.call(document.querySelectorAll('a[href^="#"]'),function(a){
