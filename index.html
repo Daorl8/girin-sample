@@ -1,33 +1,33 @@
 <!doctype html>
-<html lang="ko">
+<html lang="en">
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>girin haus 기린하우스 | 청주 스페셜티 커피 &amp; 내추럴 와인</title>
-<meta name="description" content="낮에는 커피, 밤에는 와인. 청주 흥덕구 코너 건물 1층 기린하우스. 스페셜티 커피와 내추럴 와인, 금·토요일은 밤 11시까지." />
+<title>girin haus | Specialty Coffee &amp; Natural Wine, Cheongju · 기린하우스</title>
+<meta name="description" content="girin haus 기린하우스. Specialty coffee and natural wine in a corner haus, Heungdeok-gu, Cheongju. Open until 11 pm on Fridays and Saturdays." />
 <link rel="canonical" href="https://girin-sample.lgt3232.workers.dev/" />
 <meta property="og:type" content="website" />
 <meta property="og:locale" content="ko_KR" />
 <meta property="og:site_name" content="girin haus 기린하우스" />
-<meta property="og:title" content="girin haus · 낮에는 커피, 밤에는 와인" />
-<meta property="og:description" content="청주 흥덕구 스페셜티 커피 & 내추럴 와인. 금·토요일은 밤 11시까지." />
+<meta property="og:title" content="girin haus · Coffee &amp; Natural Wine, Cheongju" />
+<meta property="og:description" content="Specialty coffee and natural wine in a corner haus. 청주 흥덕구 기린하우스." />
 <meta property="og:url" content="https://girin-sample.lgt3232.workers.dev/" />
 <meta property="og:image" content="https://girin-sample.lgt3232.workers.dev/og-girin.jpg" />
 <meta property="og:image:width" content="1200" />
 <meta property="og:image:height" content="630" />
 <meta name="twitter:card" content="summary_large_image" />
-<meta name="theme-color" content="#121211" />
+<meta name="theme-color" content="#E2DCD9" />
 <link rel="icon" href="favicon.png" type="image/png" />
 <!-- 시안 도메인 = girin-sample.lgt3232.workers.dev. 고객 인계 시 grep lgt3232 → canonical·og:url·og:image·JSON-LD url/image 치환 -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "CafeOrCoffeeShop",
-  "name": "기린하우스 girin haus",
+  "name": "girin haus 기린하우스",
   "url": "https://girin-sample.lgt3232.workers.dev/",
   "image": "https://girin-sample.lgt3232.workers.dev/og-girin.jpg",
   "telephone": "+82-507-1353-1766",
-  "servesCuisine": "스페셜티 커피, 내추럴 와인",
+  "servesCuisine": "Specialty coffee, Natural wine",
   "address": { "@type": "PostalAddress", "streetAddress": "흥덕로162번길 45 1층", "addressLocality": "청주시 흥덕구", "addressRegion": "충청북도", "addressCountry": "KR" },
   "openingHoursSpecification": [
     { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday"], "opens": "09:00", "closes": "21:00" },
@@ -38,143 +38,125 @@
 }
 </script>
 <style>
-@font-face{ font-family:"GH Sans"; font-weight:400; font-display:swap; src:url("gh-plex-r.woff2") format("woff2"); }
-@font-face{ font-family:"GH Sans"; font-weight:600; font-display:swap; src:url("gh-plex-sb.woff2") format("woff2"); }
-@font-face{ font-family:"GH Mono"; font-weight:400; font-display:swap; src:url("gh-mono.woff2") format("woff2"); }
+@font-face{ font-family:"GH Caslon"; font-weight:400; font-display:swap; src:url("gh-caslon.woff2") format("woff2"); }
+@font-face{ font-family:"GH Grotesk"; font-weight:400 600; font-display:swap; src:url("gh-hanken.woff2") format("woff2"); }
+@font-face{ font-family:"GH Ko"; font-weight:400 600; font-display:swap; src:url("gh-pretendard.woff2") format("woff2"); }
 
 :root{
-  --paper:#FAFAF8;
-  --ink:#161615;
-  --soft:#5E5E5B;       /* 6.4:1 */
-  --line:#E2E2DF;
-  --red:#CC1E1C;        /* 빨간 배경 사진 실측(198,0,0 / 205,14,29)을 살짝 밝게 · 흰 글자 5.3:1 */
-  --night:#121211;
-  --night-ink:#F2F2F0;
-  --night-soft:#A3A3A0; /* 7.6:1 */
-  --night-line:#2C2C2A;
-  --sans:"GH Sans",-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo","Malgun Gothic",sans-serif;
-  --mono:"GH Mono","GH Sans",ui-monospace,Menlo,Consolas,monospace;
-  --wrap:1160px;
-  --r:2px;
+  --wall:#E2DCD9;        /* 사장님 정물 사진 속 벽 실측(224,215,213 · 208,200,198) */
+  --wall-2:#D6CECB;
+  --ink:#1B1918;         /* 12.9:1 */
+  --soft:#564E4A;        /* 약 6.3:1 */
+  --line:#C9C0BC;
+  --display:"GH Caslon","GH Ko",-apple-system,"Apple SD Gothic Neo","Malgun Gothic",sans-serif;
+  --sans:"GH Grotesk","GH Ko",-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo","Malgun Gothic",sans-serif;
+  --wrap:1200px;
 }
 *,*::before,*::after{ box-sizing:border-box; }
 html{ -webkit-text-size-adjust:100%; }
-body{ margin:0; background:var(--paper); color:var(--ink); font-family:var(--sans); font-size:16px; line-height:1.75; word-break:keep-all; overflow-wrap:break-word; }
+body{ margin:0; background:var(--wall); color:var(--ink); font-family:var(--sans); font-size:16px; line-height:1.7; }
+[lang="ko"]{ word-break:keep-all; }
 img{ max-width:100%; height:auto; display:block; }
 a{ color:inherit; text-decoration:none; }
 h1,h2,h3,p{ margin:0; }
-:focus-visible{ outline:2px solid var(--red); outline-offset:3px; }
+:focus-visible{ outline:1.5px solid var(--ink); outline-offset:3px; }
 .wrap{ width:min(100% - 40px, var(--wrap)); margin:0 auto; }
-.sec{ padding:96px 0; }
-@media (min-width:900px){ .sec{ padding:136px 0; } }
+.ko{ font-family:"GH Ko",-apple-system,"Apple SD Gothic Neo","Malgun Gothic",sans-serif; color:var(--soft); font-size:.86rem; letter-spacing:.01em; }
+.small{ font-size:.78rem; letter-spacing:.14em; text-transform:uppercase; }
 
-.mono{ font-family:var(--mono); font-size:.78rem; letter-spacing:.08em; text-transform:uppercase; }
-.h2{ font-weight:600; font-size:clamp(1.9rem,4.6vw,2.9rem); line-height:1.3; margin-top:14px; letter-spacing:-.02em; }
-.desc{ margin-top:16px; max-width:32em; color:var(--soft); font-size:1.02rem; }
-.head{ display:grid; gap:4px; margin-bottom:48px; }
-@media (min-width:900px){ .head{ grid-template-columns:1fr 1fr; align-items:end; gap:56px; margin-bottom:60px; } .head .desc{ margin-top:0; justify-self:end; } }
-
-.btn{ display:inline-flex; align-items:center; justify-content:center; min-height:50px; padding:0 24px; border:1.5px solid var(--ink); border-radius:var(--r); font-size:.94rem; font-weight:600; transition:background .2s ease, color .2s ease, transform .15s ease; }
-.btn.fill{ background:var(--red); border-color:var(--red); color:#FFF; }
-.btn:active{ transform:scale(.98); }
-@media (hover:hover){ .btn:not(.fill):hover{ background:var(--ink); color:var(--paper); } .btn.fill:hover{ background:#A9180F; border-color:#A9180F; } }
-
-/* 헤더 */
-.site-head{ position:sticky; top:0; z-index:50; background:rgba(250,250,248,.97); border-bottom:1px solid var(--line); }
-.site-head .wrap{ display:flex; align-items:center; justify-content:space-between; gap:16px; min-height:64px; }
-.brand img{ width:62px; }
-.nav{ display:none; gap:30px; font-size:.94rem; }
+/* 헤더: 아주 얇게 */
+.site-head{ position:sticky; top:0; z-index:50; background:rgba(226,220,217,.94); }
+.site-head .wrap{ display:flex; align-items:center; justify-content:space-between; gap:16px; min-height:60px; }
+.brand img{ width:52px; }
+.nav{ display:none; gap:28px; }
 @media (min-width:900px){ .nav{ display:flex; } }
-@media (hover:hover){ .nav a:hover{ color:var(--red); } }
-.head-cta{ min-height:40px; padding:0 16px; font-size:.84rem; }
-@media (max-width:899px){ .head-cta{ display:none; } }
+.nav a{ font-size:.86rem; letter-spacing:.04em; }
+@media (hover:hover){ .nav a:hover{ text-decoration:underline; text-underline-offset:5px; } }
+.head-link{ font-size:.86rem; text-decoration:underline; text-underline-offset:5px; }
 
-/* 히어로 */
-.hero{ padding:40px 0 80px; }
-@media (min-width:900px){ .hero{ padding:72px 0 120px; } }
-.hero .wrap{ display:grid; gap:40px; align-items:center; }
-@media (min-width:900px){ .hero .wrap{ grid-template-columns:5fr 6fr; gap:72px; } }
-.hero h1{ margin-top:18px; font-weight:600; font-size:clamp(2.5rem,7vw,4.4rem); line-height:1.2; letter-spacing:-.03em; }
-.hero h1 em{ font-style:normal; color:var(--red); }
-.hero .lead{ margin-top:24px; max-width:26em; color:var(--soft); font-size:1.05rem; }
-.hero .cta{ display:flex; flex-wrap:wrap; gap:8px; margin-top:30px; }
-.pair{ display:grid; grid-template-columns:1fr 1fr; gap:12px; }
-@media (min-width:900px){ .pair{ gap:20px; } }
-.pair figure{ margin:0; }
-.pair img{ width:100%; aspect-ratio:3/4; object-fit:cover; border-radius:var(--r); }
-.pair figcaption{ margin-top:10px; display:flex; justify-content:space-between; gap:8px; }
-.pair figure:last-child{ margin-top:48px; }
+/* 표지 */
+.cover{ padding:56px 0 0; text-align:center; }
+@media (min-width:900px){ .cover{ padding:96px 0 0; } }
+.cover .word{ width:min(62vw, 340px); margin:0 auto; }
+.cover h1{ margin-top:34px; font-family:var(--display); font-weight:400; font-size:clamp(1.5rem,3.4vw,2.3rem); line-height:1.25; }
+.cover .ko{ display:block; margin-top:10px; }
+.cover figure{ margin:56px 0 0; }
+@media (min-width:900px){ .cover figure{ margin-top:88px; } }
+.cover figure img{ width:100%; aspect-ratio:3/2; object-fit:cover; }
 
-/* 낮 */
-.day-grid{ display:grid; grid-template-columns:1fr 1fr; gap:28px 14px; }
-@media (min-width:900px){ .day-grid{ grid-template-columns:repeat(4,1fr); gap:24px; } }
-.card figure, .card{ margin:0; }
-.card img{ width:100%; aspect-ratio:4/5; object-fit:cover; border-radius:var(--r); }
-.card figcaption{ margin-top:12px; font-weight:600; font-size:1rem; }
+.intro{ padding:96px 0; }
+@media (min-width:900px){ .intro{ padding:150px 0; } }
+.intro p{ max-width:22em; margin:0 auto; text-align:center; font-family:var(--display); font-size:clamp(1.4rem,3vw,2.05rem); line-height:1.4; }
+.intro .ko{ display:block; max-width:30em; margin:22px auto 0; text-align:center; font-family:"GH Ko",sans-serif; font-size:.92rem; line-height:1.8; }
 
-/* 밤 */
-.night{ background:var(--night); color:var(--night-ink); }
-.night .desc{ color:var(--night-soft); }
-.night .mono{ color:var(--night-soft); }
-.night-head{ display:grid; gap:32px; margin-bottom:52px; }
-@media (min-width:900px){ .night-head{ grid-template-columns:auto 1fr; gap:64px; align-items:end; margin-bottom:64px; } }
-.night-head .mark{ width:92px; }
-@media (min-width:900px){ .night-head .mark{ width:120px; } }
-.night-grid{ display:grid; grid-template-columns:1fr 1fr; gap:14px; }
-.night-grid figure{ margin:0; }
-.night-grid img{ width:100%; height:100%; object-fit:cover; border-radius:var(--r); }
-.night-grid .w{ grid-column:1 / -1; aspect-ratio:4/3; }
-.night-grid .s{ aspect-ratio:3/4; }
+/* 플레이트: 사진집처럼 한 장씩 */
+.plates{ display:grid; gap:96px; padding-bottom:120px; }
+@media (min-width:900px){ .plates{ gap:150px; padding-bottom:170px; } }
+.plate{ display:grid; gap:18px; margin:0; }
 @media (min-width:900px){
-  .night-grid{ grid-template-columns:repeat(12,1fr); grid-auto-rows:120px; gap:20px; }
-  .night-grid .w{ grid-column:1 / 8; grid-row:span 4; aspect-ratio:auto; }
-  .night-grid .s1{ grid-column:8 / 13; grid-row:span 4; aspect-ratio:auto; }
-  .night-grid .s2{ grid-column:1 / 5; grid-row:span 3; aspect-ratio:auto; }
-  .night-grid .s3{ grid-column:5 / 13; grid-row:span 3; aspect-ratio:auto; }
+  .plate{ grid-template-columns:repeat(12,1fr); gap:24px; align-items:end; }
+  .plate img{ grid-column:2 / 9; }
+  .plate figcaption{ grid-column:9 / 12; }
+  .plate.r img{ grid-column:5 / 12; grid-row:1; }
+  .plate.r figcaption{ grid-column:2 / 5; grid-row:1; text-align:right; }
+  .plate.c img{ grid-column:4 / 10; }
+  .plate.c figcaption{ grid-column:10 / 13; }
 }
-.events{ margin-top:44px; padding:22px 24px; border:1px solid var(--night-line); border-left:0; border-right:0; display:grid; gap:12px; }
-@media (min-width:900px){ .events{ grid-template-columns:1fr auto; align-items:center; } }
-.events p{ color:var(--night-soft); }
-.events b{ color:var(--night-ink); font-weight:600; }
-.events a{ color:var(--night-ink); text-decoration:underline; text-underline-offset:4px; font-weight:600; }
+.plate img{ width:100%; aspect-ratio:4/5; object-fit:cover; }
+.plate.wide img{ aspect-ratio:4/3; }
+.plate figcaption .no{ display:block; font-family:var(--display); font-size:1rem; color:var(--soft); }
+.plate figcaption .t{ display:block; margin-top:6px; font-family:var(--display); font-size:1.55rem; line-height:1.25; }
+.plate figcaption .d{ display:block; margin-top:8px; color:var(--soft); font-size:.94rem; }
+.plate figcaption .ko{ display:block; margin-top:4px; }
 
-/* 공간 */
-.space-grid{ display:grid; grid-template-columns:1fr 1fr; gap:14px; }
-@media (min-width:900px){ .space-grid{ grid-template-columns:repeat(4,1fr); gap:20px; } }
-.space-grid figure{ margin:0; }
-.space-grid img{ width:100%; aspect-ratio:3/4; object-fit:cover; border-radius:var(--r); }
+/* 장(챕터) 표시 */
+.chapter{ text-align:center; padding:0 0 72px; }
+@media (min-width:900px){ .chapter{ padding-bottom:110px; } }
+.chapter .small{ color:var(--soft); }
+.chapter h2{ margin-top:12px; font-family:var(--display); font-weight:400; font-size:clamp(2rem,5vw,3.4rem); line-height:1.1; }
+.chapter .ko{ display:block; margin-top:10px; }
 
-/* 오시는 길 */
-.visit{ border-top:1px solid var(--line); }
-.visit .wrap{ display:grid; gap:40px; }
-@media (min-width:900px){ .visit .wrap{ grid-template-columns:5fr 6fr; gap:72px; align-items:start; } }
-.info{ margin:28px 0 0; }
-.info div{ display:grid; grid-template-columns:72px 1fr; gap:12px; padding:16px 0; border-top:1px solid var(--line); }
+/* 모임 */
+.gather{ background:var(--wall-2); padding:96px 0; text-align:center; }
+@media (min-width:900px){ .gather{ padding:140px 0; } }
+.gather img{ width:84px; margin:0 auto; }
+.gather p.t{ margin-top:30px; max-width:24em; margin-left:auto; margin-right:auto; font-family:var(--display); font-size:clamp(1.3rem,2.8vw,1.85rem); line-height:1.4; }
+.gather .ko{ display:block; margin-top:16px; }
+.gather a{ display:inline-block; margin-top:26px; font-size:.9rem; text-decoration:underline; text-underline-offset:5px; }
+
+/* 방문 */
+.visit{ padding:110px 0 120px; }
+@media (min-width:900px){ .visit{ padding:150px 0; } }
+.visit .wrap{ display:grid; gap:48px; }
+@media (min-width:900px){ .visit .wrap{ grid-template-columns:5fr 6fr; gap:80px; align-items:start; } }
+.visit h2{ font-family:var(--display); font-weight:400; font-size:clamp(2rem,5vw,3.4rem); line-height:1.1; }
+.info{ margin:34px 0 0; }
+.info div{ display:grid; grid-template-columns:84px 1fr; gap:12px; padding:16px 0; border-top:1px solid var(--line); }
 .info div:last-child{ border-bottom:1px solid var(--line); }
-.info dt{ font-weight:600; }
-.info dd{ margin:0; color:var(--soft); }
-.info dd small{ display:block; margin-top:4px; font-size:.88rem; }
-.hours{ display:grid; grid-template-columns:auto 1fr; gap:2px 16px; }
-.hours span:nth-child(even){ font-family:var(--mono); font-size:.92rem; }
-.visit .cta{ margin-top:24px; display:flex; flex-wrap:wrap; gap:8px; }
-.map{ width:100%; aspect-ratio:4/3; border:0; border-radius:var(--r); background:#EEEEEC; }
+.info dt{ font-size:.78rem; letter-spacing:.14em; text-transform:uppercase; color:var(--soft); padding-top:3px; }
+.info dd{ margin:0; }
+.info dd .ko{ display:block; margin-top:4px; }
+.hours{ display:grid; grid-template-columns:auto 1fr; gap:2px 18px; font-variant-numeric:tabular-nums; }
+.links{ margin-top:28px; display:flex; flex-wrap:wrap; gap:10px; }
+.btn{ display:inline-flex; align-items:center; justify-content:center; min-height:48px; padding:0 22px; border:1px solid var(--ink); font-size:.9rem; letter-spacing:.03em; transition:background .2s ease, color .2s ease; }
+.btn.fill{ background:var(--ink); color:var(--wall); }
+@media (hover:hover){ .btn:not(.fill):hover{ background:var(--ink); color:var(--wall); } .btn.fill:hover{ background:#000; } }
+.map{ width:100%; aspect-ratio:4/3; border:0; background:var(--wall-2); filter:grayscale(.85) contrast(.95); }
 
 /* 푸터 */
-.foot{ background:var(--night); color:var(--night-ink); text-align:center; padding:60px 0 calc(110px + env(safe-area-inset-bottom)); font-size:.88rem; }
-@media (min-width:900px){ .foot{ padding:76px 0; } }
-.foot img{ width:110px; margin:0 auto 20px; }
+.foot{ border-top:1px solid var(--line); text-align:center; padding:60px 0 calc(110px + env(safe-area-inset-bottom)); font-size:.84rem; color:var(--soft); }
+@media (min-width:900px){ .foot{ padding:70px 0; } }
+.foot img{ width:60px; margin:0 auto 18px; }
 .foot p + p{ margin-top:6px; }
-.foot .muted{ color:var(--night-soft); }
-.foot a{ text-decoration:underline; text-underline-offset:3px; }
 
 /* 모바일 하단 바 (불투명) */
-.quick{ position:fixed; left:0; right:0; bottom:0; z-index:60; display:grid; grid-template-columns:1.5fr 1fr 1fr; gap:6px; padding:8px 10px calc(8px + env(safe-area-inset-bottom)); background:var(--paper); border-top:1px solid var(--line); }
-.quick a{ display:flex; align-items:center; justify-content:center; min-height:48px; border:1.5px solid var(--ink); border-radius:var(--r); font-size:.88rem; font-weight:600; background:var(--paper); }
-.quick a.fill{ background:var(--red); border-color:var(--red); color:#FFF; }
+.quick{ position:fixed; left:0; right:0; bottom:0; z-index:60; display:grid; grid-template-columns:1.4fr 1fr 1fr; gap:6px; padding:8px 10px calc(8px + env(safe-area-inset-bottom)); background:var(--wall); border-top:1px solid var(--line); }
+.quick a{ display:flex; align-items:center; justify-content:center; min-height:48px; border:1px solid var(--ink); font-size:.86rem; letter-spacing:.03em; background:var(--wall); }
+.quick a.fill{ background:var(--ink); color:var(--wall); }
 @media (min-width:900px){ .quick{ display:none; } }
 
-/* 리빌: setInterval 구동 */
-.js .reveal{ opacity:0; transform:translateY(16px); transition:opacity .5s ease, transform .5s cubic-bezier(.2,.7,.2,1); transition-delay:var(--d,0s); }
+/* 리빌: setInterval 구동, 아주 느리고 얕게 */
+.js .reveal{ opacity:0; transform:translateY(12px); transition:opacity .8s ease, transform .8s ease; transition-delay:var(--d,0s); }
 .js .reveal.in{ opacity:1; transform:none; }
 @media print{ .js .reveal{ opacity:1; transform:none; } }
 </style>
@@ -182,129 +164,120 @@ h1,h2,h3,p{ margin:0; }
 <script>document.documentElement.classList.add('js');</script>
 </head>
 <body>
+
 <header class="site-head">
   <div class="wrap">
-    <a class="brand" href="#top" aria-label="기린하우스 처음으로"><img src="gh-word.webp" alt="girin haus" width="560" height="424" /></a>
-    <nav class="nav" aria-label="주요 메뉴"><a href="#day">커피</a><a href="#night">와인</a><a href="#space">공간</a><a href="#visit">오시는 길</a></nav>
-    <a class="btn fill head-cta" href="https://map.naver.com/p/entry/place/2089571955" target="_blank" rel="noopener">네이버 길찾기</a>
+    <a class="brand" href="#top" aria-label="girin haus, back to top"><img src="gh-word.webp" alt="girin haus" width="560" height="424" /></a>
+    <nav class="nav" aria-label="Menu"><a href="#coffee">Coffee</a><a href="#wine">Wine</a><a href="#haus">The Haus</a><a href="#visit">Visit</a></nav>
+    <a class="head-link" href="https://map.naver.com/p/entry/place/2089571955" target="_blank" rel="noopener">Directions</a>
   </div>
 </header>
 
 <main id="top">
-  <section class="hero">
+  <section class="cover">
+    <div class="wrap reveal">
+      <img class="word" src="gh-word.webp" alt="girin haus" width="560" height="424" />
+      <h1>Specialty coffee &amp; natural wine</h1>
+      <span class="ko" lang="ko">청주 흥덕구 · 스페셜티 커피와 내추럴 와인</span>
+    </div>
+    <figure class="reveal"><img src="gh-cover.webp" alt="A glass under a circle of light, with the words 기린하우스 cast on the wall" width="1600" height="1067" fetchpriority="high" /></figure>
+  </section>
+
+  <section class="intro">
+    <div class="wrap reveal">
+      <p>A small haus on a street corner. Coffee from the morning, natural wine into the night, and the light moving slowly across the room in between.</p>
+      <span class="ko" lang="ko">코너 건물 1층의 작은 집. 아침엔 커피를, 밤엔 내추럴 와인을 내요.</span>
+    </div>
+  </section>
+
+  <section id="coffee" aria-labelledby="coffee-h">
+    <div class="chapter wrap reveal">
+      <p class="small">Chapter I</p>
+      <h2 id="coffee-h">Coffee</h2>
+      <span class="ko" lang="ko">커피 · 말차 · 디저트</span>
+    </div>
+    <div class="plates wrap">
+      <figure class="plate reveal"><img src="gh-coupe.webp" alt="Coffee in a tall coupe glass, long shadow on a pale wall" width="900" height="816" loading="lazy" /><figcaption><span class="no">Plate 01</span><span class="t">Coffee, in a coupe</span><span class="ko" lang="ko">커피</span></figcaption></figure>
+      <figure class="plate r reveal"><img src="gh-matcha.webp" alt="Layered matcha latte in a tall glass" width="900" height="1200" loading="lazy" /><figcaption><span class="no">Plate 02</span><span class="t">Matcha latte</span><span class="ko" lang="ko">말차 라떼</span></figcaption></figure>
+      <figure class="plate c reveal"><img src="gh-day.webp" alt="Iced coffee on a wooden table in afternoon sun" width="1080" height="1437" loading="lazy" /><figcaption><span class="no">Plate 03</span><span class="t">Afternoon, iced</span><span class="ko" lang="ko">아이스 커피</span></figcaption></figure>
+      <figure class="plate r reveal"><img src="gh-dessert.webp" alt="A spoonful of cream and chocolate lifted from a bowl" width="900" height="1200" loading="lazy" /><figcaption><span class="no">Plate 04</span><span class="t">Something sweet</span><span class="ko" lang="ko">디저트</span></figcaption></figure>
+      <figure class="plate reveal"><img src="gh-focaccia.webp" alt="Focaccia with ham, cheese and a boiled egg on a plate" width="900" height="1200" loading="lazy" /><figcaption><span class="no">Plate 05</span><span class="t">Focaccia plate</span><span class="ko" lang="ko">포카치아 플레이트</span></figcaption></figure>
+    </div>
+  </section>
+
+  <section id="wine" aria-labelledby="wine-h">
+    <div class="chapter wrap reveal">
+      <p class="small">Chapter II</p>
+      <h2 id="wine-h">Natural Wine</h2>
+      <span class="ko" lang="ko">내추럴 와인 · 금 · 토요일은 밤 11시까지</span>
+    </div>
+    <div class="plates wrap">
+      <figure class="plate c reveal"><img src="gh-lamp.webp" alt="A glass of red wine on a long wooden table under a paper lamp" width="900" height="1200" loading="lazy" /><figcaption><span class="no">Plate 06</span><span class="t">A glass of red</span><span class="d">Open until 11 pm on Fridays and Saturdays.</span></figcaption></figure>
+      <figure class="plate r wide reveal"><img src="gh-window.webp" alt="Two glasses of wine on the window ledge" width="1080" height="810" loading="lazy" /><figcaption><span class="no">Plate 07</span><span class="t">By the window</span><span class="ko" lang="ko">창가의 와인 두 잔</span></figcaption></figure>
+    </div>
+  </section>
+
+  <section class="gather" aria-label="Gatherings">
+    <div class="wrap reveal">
+      <img src="gh-mark.webp" alt="Hand-drawn wine glass with the words girin haus" width="416" height="660" loading="lazy" />
+      <p class="t">Now and then, an evening of wine, ice cream, small exhibitions and a DJ set.</p>
+      <span class="ko" lang="ko">가끔은 와인과 전시, 음악이 있는 모임이 열려요.</span>
+      <a href="https://www.instagram.com/girin_haus/" target="_blank" rel="noopener">Dates on Instagram, @girin_haus</a>
+    </div>
+  </section>
+
+  <section id="haus" aria-labelledby="haus-h" style="padding-top:110px">
+    <div class="chapter wrap reveal">
+      <p class="small">Chapter III</p>
+      <h2 id="haus-h">The Haus</h2>
+      <span class="ko" lang="ko">코너 건물 1층</span>
+    </div>
+    <div class="plates wrap">
+      <figure class="plate wide reveal"><img src="gh-lounge.webp" alt="A paper pendant lamp, lounge chairs and paintings leaning on the wall" width="900" height="1198" loading="lazy" /><figcaption><span class="no">Plate 08</span><span class="t">Paper light</span><span class="d">Big windows on a street corner, and a lamp like a small moon.</span></figcaption></figure>
+      <figure class="plate r reveal"><img src="gh-chair.webp" alt="A red chair by the glass window" width="900" height="1200" loading="lazy" /><figcaption><span class="no">Plate 09</span><span class="t">The red chair</span><span class="ko" lang="ko">창가의 빨간 의자</span></figcaption></figure>
+      <figure class="plate c reveal"><img src="gh-corner.webp" alt="White tiled corner building with the cafe on the ground floor" width="1080" height="1440" loading="lazy" /><figcaption><span class="no">Plate 10</span><span class="t">On the corner</span><span class="ko" lang="ko">흰 타일의 코너 건물</span></figcaption></figure>
+    </div>
+  </section>
+
+  <section class="visit" id="visit" aria-labelledby="visit-h" style="border-top:1px solid var(--line)">
     <div class="wrap">
       <div class="reveal">
-        <p class="mono">Specialty Coffee &amp; Natural Wine · Cheongju</p>
-        <h1>낮에는 커피,<br />밤에는 <em>와인</em></h1>
-        <p class="lead">청주 흥덕구 코너 건물 1층. 낮에는 스페셜티 커피를, 해가 지면 내추럴 와인을 내는 기린하우스입니다.</p>
-        <div class="cta">
-          <a class="btn fill" href="https://map.naver.com/p/entry/place/2089571955" target="_blank" rel="noopener">네이버 길찾기</a>
-          <a class="btn" href="#visit">영업시간 보기</a>
-        </div>
-      </div>
-      <div class="pair reveal">
-        <figure><img src="gh-day.webp" alt="햇빛이 드는 원목 테이블 위의 아이스 커피" width="1080" height="1437" fetchpriority="high" /><figcaption class="mono"><span>Day</span><span>09:00</span></figcaption></figure>
-        <figure><img src="gh-night.webp" alt="조명 아래 와인잔이 놓인 저녁의 바 테이블" width="752" height="1008" /><figcaption class="mono"><span>Night</span><span>23:00</span></figcaption></figure>
-      </div>
-    </div>
-  </section>
-
-  <section class="sec" id="day" aria-labelledby="day-h">
-    <div class="wrap">
-      <div class="head reveal">
-        <div><p class="mono">Day · 09:00 ~</p><h2 id="day-h" class="h2">스페셜티 커피</h2></div>
-        <p class="desc">월요일부터 목요일까지는 아침 9시에 문을 열어요. 커피와 말차, 포카치아 플레이트와 디저트를 준비해요.</p>
-      </div>
-      <div class="day-grid">
-        <figure class="card reveal"><img src="gh-coupe.webp" alt="굽 높은 쿠페 잔에 담긴 커피" width="900" height="816" loading="lazy" /><figcaption>커피</figcaption></figure>
-        <figure class="card reveal"><img src="gh-matcha.webp" alt="긴 유리잔에 층이 진 말차 라떼" width="900" height="1200" loading="lazy" /><figcaption>말차 라떼</figcaption></figure>
-        <figure class="card reveal"><img src="gh-focaccia.webp" alt="포카치아와 햄, 치즈, 삶은 달걀이 담긴 접시" width="900" height="1200" loading="lazy" /><figcaption>포카치아 플레이트</figcaption></figure>
-        <figure class="card reveal"><img src="gh-dessert.webp" alt="크림과 초콜릿을 올린 디저트를 숟가락으로 뜨는 모습" width="900" height="1200" loading="lazy" /><figcaption>디저트</figcaption></figure>
-      </div>
-    </div>
-  </section>
-
-  <section class="sec night" id="night" aria-labelledby="night-h">
-    <div class="wrap">
-      <div class="night-head reveal">
-        <img class="mark" src="gh-mark-w.webp" alt="와인잔 안에 girin haus 글씨를 그린 로고" width="416" height="660" loading="lazy" />
-        <div>
-          <p class="mono">Night · ~ 23:00</p>
-          <h2 id="night-h" class="h2">내추럴 와인</h2>
-          <p class="desc">해가 지면 와인잔을 꺼내요. 금요일과 토요일은 밤 11시까지. 내추럴 와인 한 잔에 디저트를 곁들여 천천히 머물다 가세요.</p>
-        </div>
-      </div>
-      <div class="night-grid">
-        <figure class="w reveal"><img src="gh-window.webp" alt="창가 테이블에 놓인 와인 두 잔" width="1080" height="810" loading="lazy" /></figure>
-        <figure class="s s1 reveal"><img src="gh-wine.webp" alt="둥근 조명 아래 원목 테이블의 와인 병과 빈 잔" width="900" height="1200" loading="lazy" /></figure>
-        <figure class="s s2 reveal"><img src="gh-red.webp" alt="빨간 바탕 위 꽃잎 접시에 담긴 초콜릿 디저트" width="900" height="1200" loading="lazy" /></figure>
-        <figure class="s s3 reveal"><img src="gh-bar.webp" alt="와인 병과 커피 도구가 놓인 저녁의 바" width="900" height="1200" loading="lazy" /></figure>
-      </div>
-      <div class="events reveal">
-        <p><b>가끔은 모임이 열려요.</b> 와인과 아이스크림, 전시와 DJ 세트가 있는 밤. 소식은 인스타그램에서 확인해 주세요.</p>
-        <a href="https://www.instagram.com/girin_haus/" target="_blank" rel="noopener">@girin_haus</a>
-      </div>
-    </div>
-  </section>
-
-  <section class="sec" id="space" aria-labelledby="space-h">
-    <div class="wrap">
-      <div class="head reveal">
-        <div><p class="mono">Space · Haus</p><h2 id="space-h" class="h2">코너의 작은 집</h2></div>
-        <p class="desc">큰 창으로 햇빛이 드는 코너 건물 1층. 빨간 의자와 커다란 조명 아래에서 쉬어 가세요.</p>
-      </div>
-      <div class="space-grid">
-        <figure class="reveal"><img src="gh-lounge.webp" alt="큰 펜던트 조명과 라운지 의자, 벽에 기댄 그림" width="900" height="1198" loading="lazy" /></figure>
-        <figure class="reveal"><img src="gh-chair.webp" alt="통유리 창가의 빨간 의자" width="900" height="1200" loading="lazy" /></figure>
-        <figure class="reveal"><img src="gh-lamp.webp" alt="원목 테이블 위 둥근 조명과 꽃병" width="900" height="1200" loading="lazy" /></figure>
-        <figure class="reveal"><img src="gh-corner.webp" alt="흰 외벽의 코너 건물 1층 매장 외관" width="1080" height="1440" loading="lazy" /></figure>
-      </div>
-    </div>
-  </section>
-
-  <section class="sec visit" id="visit" aria-labelledby="visit-h">
-    <div class="wrap">
-      <div class="reveal">
-        <p class="mono">Visit</p>
-        <h2 id="visit-h" class="h2">오시는 길</h2>
+        <p class="small" style="color:var(--soft)">Visit</p>
+        <h2 id="visit-h" style="margin-top:12px">Find us</h2>
         <dl class="info">
-          <div><dt>주소</dt><dd>충북 청주시 흥덕구 흥덕로162번길 45 1층<small>코너 건물</small></dd></div>
-          <div><dt>영업</dt><dd><span class="hours"><span>월~목</span><span>09:00 ~ 21:00</span><span>금·토</span><span>12:00 ~ 23:00</span><span>일</span><span>12:00 ~ 21:00</span></span></dd></div>
-          <div><dt>전화</dt><dd><a href="tel:050713531766">0507-1353-1766</a></dd></div>
+          <div><dt>Address</dt><dd>1F, 45 Heungdeok-ro 162beon-gil, Heungdeok-gu, Cheongju<span class="ko" lang="ko">충북 청주시 흥덕구 흥덕로162번길 45 1층 · 코너 건물</span></dd></div>
+          <div><dt>Hours</dt><dd><span class="hours"><span>Mon–Thu</span><span>09:00 – 21:00</span><span>Fri–Sat</span><span>12:00 – 23:00</span><span>Sun</span><span>12:00 – 21:00</span></span></dd></div>
+          <div><dt>Call</dt><dd><a href="tel:050713531766">0507-1353-1766</a></dd></div>
         </dl>
-        <div class="cta">
-          <a class="btn fill" href="https://map.naver.com/p/entry/place/2089571955" target="_blank" rel="noopener">네이버 길찾기</a>
-          <a class="btn" href="https://www.instagram.com/girin_haus/" target="_blank" rel="noopener">인스타그램</a>
+        <div class="links">
+          <a class="btn fill" href="https://map.naver.com/p/entry/place/2089571955" target="_blank" rel="noopener">Naver Map</a>
+          <a class="btn" href="https://www.instagram.com/girin_haus/" target="_blank" rel="noopener">Instagram</a>
         </div>
       </div>
-      <iframe class="map reveal" title="기린하우스 위치 지도" src="https://www.google.com/maps?q=%EC%B6%A9%EB%B6%81%20%EC%B2%AD%EC%A3%BC%EC%8B%9C%20%ED%9D%A5%EB%8D%95%EA%B5%AC%20%ED%9D%A5%EB%8D%95%EB%A1%9C162%EB%B2%88%EA%B8%B8%2045&amp;output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      <iframe class="map reveal" title="Map to girin haus" src="https://www.google.com/maps?q=%EC%B6%A9%EB%B6%81%20%EC%B2%AD%EC%A3%BC%EC%8B%9C%20%ED%9D%A5%EB%8D%95%EA%B5%AC%20%ED%9D%A5%EB%8D%95%EB%A1%9C162%EB%B2%88%EA%B8%B8%2045&amp;output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
     </div>
   </section>
 </main>
 
 <footer class="foot">
   <div class="wrap">
-    <img src="gh-word-w.webp" alt="" width="560" height="424" loading="lazy" />
-    <p>낮에는 커피, 밤에는 와인</p>
-    <p class="muted">충북 청주시 흥덕구 흥덕로162번길 45 1층 · 0507-1353-1766 · <a href="https://www.instagram.com/girin_haus/" target="_blank" rel="noopener">@girin_haus</a></p>
-    <p class="muted">© girin haus</p>
+    <img src="gh-mark.webp" alt="" width="416" height="660" loading="lazy" />
+    <p>girin haus · Specialty coffee &amp; natural wine</p>
+    <p><span lang="ko">청주 흥덕구 흥덕로162번길 45 1층</span> · <a href="https://www.instagram.com/girin_haus/" target="_blank" rel="noopener">@girin_haus</a></p>
+    <p>© girin haus</p>
   </div>
 </footer>
 
-<div class="quick" aria-label="빠른 연결">
-  <a class="fill" href="https://map.naver.com/p/entry/place/2089571955" target="_blank" rel="noopener">길찾기</a>
-  <a href="tel:050713531766">전화</a>
-  <a href="https://www.instagram.com/girin_haus/" target="_blank" rel="noopener">인스타</a>
+<div class="quick" aria-label="Quick links">
+  <a class="fill" href="https://map.naver.com/p/entry/place/2089571955" target="_blank" rel="noopener">Directions</a>
+  <a href="tel:050713531766">Call</a>
+  <a href="https://www.instagram.com/girin_haus/" target="_blank" rel="noopener">Instagram</a>
 </div>
 
 <script>
 (function(){
   /* 리빌 */
   var pending=[].slice.call(document.querySelectorAll('.reveal'));
-  pending.forEach(function(el){
-    var sib=[].slice.call(el.parentNode.children).filter(function(c){ return c.classList.contains('reveal'); });
-    if(sib.length>1 && !el.style.getPropertyValue('--d')){ el.style.setProperty('--d',(Math.min(sib.indexOf(el),4)*0.06)+'s'); }
-  });
   var t=setInterval(function(){
     if(!pending.length){ clearInterval(t); return; }
     if(window.innerHeight + window.pageYOffset >= document.documentElement.scrollHeight - 4){
@@ -323,7 +296,7 @@ h1,h2,h3,p{ margin:0; }
       var id=a.getAttribute('href'); var el=id==='#top'?document.body:document.querySelector(id);
       if(!el) return; e.preventDefault();
       var start=window.pageYOffset, end=id==='#top'?0:el.getBoundingClientRect().top+start-head.offsetHeight+1;
-      var t0=Date.now(), dur=520;
+      var t0=Date.now(), dur=620;
       var iv=setInterval(function(){
         var p=Math.min((Date.now()-t0)/dur,1), e2=p<.5?2*p*p:1-Math.pow(-2*p+2,2)/2;
         window.scrollTo(0,start+(end-start)*e2);
