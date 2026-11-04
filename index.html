@@ -1,0 +1,337 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>girin haus 기린하우스 | 청주 스페셜티 커피 &amp; 내추럴 와인</title>
+<meta name="description" content="낮에는 커피, 밤에는 와인. 청주 흥덕구 코너 건물 1층 기린하우스. 스페셜티 커피와 내추럴 와인, 금·토요일은 밤 11시까지." />
+<link rel="canonical" href="https://girin-sample.lgt3232.workers.dev/" />
+<meta property="og:type" content="website" />
+<meta property="og:locale" content="ko_KR" />
+<meta property="og:site_name" content="girin haus 기린하우스" />
+<meta property="og:title" content="girin haus · 낮에는 커피, 밤에는 와인" />
+<meta property="og:description" content="청주 흥덕구 스페셜티 커피 & 내추럴 와인. 금·토요일은 밤 11시까지." />
+<meta property="og:url" content="https://girin-sample.lgt3232.workers.dev/" />
+<meta property="og:image" content="https://girin-sample.lgt3232.workers.dev/og-girin.jpg" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="theme-color" content="#121211" />
+<link rel="icon" href="favicon.png" type="image/png" />
+<!-- 시안 도메인 = girin-sample.lgt3232.workers.dev. 고객 인계 시 grep lgt3232 → canonical·og:url·og:image·JSON-LD url/image 치환 -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "CafeOrCoffeeShop",
+  "name": "기린하우스 girin haus",
+  "url": "https://girin-sample.lgt3232.workers.dev/",
+  "image": "https://girin-sample.lgt3232.workers.dev/og-girin.jpg",
+  "telephone": "+82-507-1353-1766",
+  "servesCuisine": "스페셜티 커피, 내추럴 와인",
+  "address": { "@type": "PostalAddress", "streetAddress": "흥덕로162번길 45 1층", "addressLocality": "청주시 흥덕구", "addressRegion": "충청북도", "addressCountry": "KR" },
+  "openingHoursSpecification": [
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday"], "opens": "09:00", "closes": "21:00" },
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Friday","Saturday"], "opens": "12:00", "closes": "23:00" },
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": "Sunday", "opens": "12:00", "closes": "21:00" }
+  ],
+  "sameAs": ["https://www.instagram.com/girin_haus/"]
+}
+</script>
+<style>
+@font-face{ font-family:"GH Sans"; font-weight:400; font-display:swap; src:url("gh-plex-r.woff2") format("woff2"); }
+@font-face{ font-family:"GH Sans"; font-weight:600; font-display:swap; src:url("gh-plex-sb.woff2") format("woff2"); }
+@font-face{ font-family:"GH Mono"; font-weight:400; font-display:swap; src:url("gh-mono.woff2") format("woff2"); }
+
+:root{
+  --paper:#FAFAF8;
+  --ink:#161615;
+  --soft:#5E5E5B;       /* 6.4:1 */
+  --line:#E2E2DF;
+  --red:#CC1E1C;        /* 빨간 배경 사진 실측(198,0,0 / 205,14,29)을 살짝 밝게 · 흰 글자 5.3:1 */
+  --night:#121211;
+  --night-ink:#F2F2F0;
+  --night-soft:#A3A3A0; /* 7.6:1 */
+  --night-line:#2C2C2A;
+  --sans:"GH Sans",-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo","Malgun Gothic",sans-serif;
+  --mono:"GH Mono","GH Sans",ui-monospace,Menlo,Consolas,monospace;
+  --wrap:1160px;
+  --r:2px;
+}
+*,*::before,*::after{ box-sizing:border-box; }
+html{ -webkit-text-size-adjust:100%; }
+body{ margin:0; background:var(--paper); color:var(--ink); font-family:var(--sans); font-size:16px; line-height:1.75; word-break:keep-all; overflow-wrap:break-word; }
+img{ max-width:100%; height:auto; display:block; }
+a{ color:inherit; text-decoration:none; }
+h1,h2,h3,p{ margin:0; }
+:focus-visible{ outline:2px solid var(--red); outline-offset:3px; }
+.wrap{ width:min(100% - 40px, var(--wrap)); margin:0 auto; }
+.sec{ padding:96px 0; }
+@media (min-width:900px){ .sec{ padding:136px 0; } }
+
+.mono{ font-family:var(--mono); font-size:.78rem; letter-spacing:.08em; text-transform:uppercase; }
+.h2{ font-weight:600; font-size:clamp(1.9rem,4.6vw,2.9rem); line-height:1.3; margin-top:14px; letter-spacing:-.02em; }
+.desc{ margin-top:16px; max-width:32em; color:var(--soft); font-size:1.02rem; }
+.head{ display:grid; gap:4px; margin-bottom:48px; }
+@media (min-width:900px){ .head{ grid-template-columns:1fr 1fr; align-items:end; gap:56px; margin-bottom:60px; } .head .desc{ margin-top:0; justify-self:end; } }
+
+.btn{ display:inline-flex; align-items:center; justify-content:center; min-height:50px; padding:0 24px; border:1.5px solid var(--ink); border-radius:var(--r); font-size:.94rem; font-weight:600; transition:background .2s ease, color .2s ease, transform .15s ease; }
+.btn.fill{ background:var(--red); border-color:var(--red); color:#FFF; }
+.btn:active{ transform:scale(.98); }
+@media (hover:hover){ .btn:not(.fill):hover{ background:var(--ink); color:var(--paper); } .btn.fill:hover{ background:#A9180F; border-color:#A9180F; } }
+
+/* 헤더 */
+.site-head{ position:sticky; top:0; z-index:50; background:rgba(250,250,248,.97); border-bottom:1px solid var(--line); }
+.site-head .wrap{ display:flex; align-items:center; justify-content:space-between; gap:16px; min-height:64px; }
+.brand img{ width:62px; }
+.nav{ display:none; gap:30px; font-size:.94rem; }
+@media (min-width:900px){ .nav{ display:flex; } }
+@media (hover:hover){ .nav a:hover{ color:var(--red); } }
+.head-cta{ min-height:40px; padding:0 16px; font-size:.84rem; }
+@media (max-width:899px){ .head-cta{ display:none; } }
+
+/* 히어로 */
+.hero{ padding:40px 0 80px; }
+@media (min-width:900px){ .hero{ padding:72px 0 120px; } }
+.hero .wrap{ display:grid; gap:40px; align-items:center; }
+@media (min-width:900px){ .hero .wrap{ grid-template-columns:5fr 6fr; gap:72px; } }
+.hero h1{ margin-top:18px; font-weight:600; font-size:clamp(2.5rem,7vw,4.4rem); line-height:1.2; letter-spacing:-.03em; }
+.hero h1 em{ font-style:normal; color:var(--red); }
+.hero .lead{ margin-top:24px; max-width:26em; color:var(--soft); font-size:1.05rem; }
+.hero .cta{ display:flex; flex-wrap:wrap; gap:8px; margin-top:30px; }
+.pair{ display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+@media (min-width:900px){ .pair{ gap:20px; } }
+.pair figure{ margin:0; }
+.pair img{ width:100%; aspect-ratio:3/4; object-fit:cover; border-radius:var(--r); }
+.pair figcaption{ margin-top:10px; display:flex; justify-content:space-between; gap:8px; }
+.pair figure:last-child{ margin-top:48px; }
+
+/* 낮 */
+.day-grid{ display:grid; grid-template-columns:1fr 1fr; gap:28px 14px; }
+@media (min-width:900px){ .day-grid{ grid-template-columns:repeat(4,1fr); gap:24px; } }
+.card figure, .card{ margin:0; }
+.card img{ width:100%; aspect-ratio:4/5; object-fit:cover; border-radius:var(--r); }
+.card figcaption{ margin-top:12px; font-weight:600; font-size:1rem; }
+
+/* 밤 */
+.night{ background:var(--night); color:var(--night-ink); }
+.night .desc{ color:var(--night-soft); }
+.night .mono{ color:var(--night-soft); }
+.night-head{ display:grid; gap:32px; margin-bottom:52px; }
+@media (min-width:900px){ .night-head{ grid-template-columns:auto 1fr; gap:64px; align-items:end; margin-bottom:64px; } }
+.night-head .mark{ width:92px; }
+@media (min-width:900px){ .night-head .mark{ width:120px; } }
+.night-grid{ display:grid; grid-template-columns:1fr 1fr; gap:14px; }
+.night-grid figure{ margin:0; }
+.night-grid img{ width:100%; height:100%; object-fit:cover; border-radius:var(--r); }
+.night-grid .w{ grid-column:1 / -1; aspect-ratio:4/3; }
+.night-grid .s{ aspect-ratio:3/4; }
+@media (min-width:900px){
+  .night-grid{ grid-template-columns:repeat(12,1fr); grid-auto-rows:120px; gap:20px; }
+  .night-grid .w{ grid-column:1 / 8; grid-row:span 4; aspect-ratio:auto; }
+  .night-grid .s1{ grid-column:8 / 13; grid-row:span 4; aspect-ratio:auto; }
+  .night-grid .s2{ grid-column:1 / 5; grid-row:span 3; aspect-ratio:auto; }
+  .night-grid .s3{ grid-column:5 / 13; grid-row:span 3; aspect-ratio:auto; }
+}
+.events{ margin-top:44px; padding:22px 24px; border:1px solid var(--night-line); border-left:0; border-right:0; display:grid; gap:12px; }
+@media (min-width:900px){ .events{ grid-template-columns:1fr auto; align-items:center; } }
+.events p{ color:var(--night-soft); }
+.events b{ color:var(--night-ink); font-weight:600; }
+.events a{ color:var(--night-ink); text-decoration:underline; text-underline-offset:4px; font-weight:600; }
+
+/* 공간 */
+.space-grid{ display:grid; grid-template-columns:1fr 1fr; gap:14px; }
+@media (min-width:900px){ .space-grid{ grid-template-columns:repeat(4,1fr); gap:20px; } }
+.space-grid figure{ margin:0; }
+.space-grid img{ width:100%; aspect-ratio:3/4; object-fit:cover; border-radius:var(--r); }
+
+/* 오시는 길 */
+.visit{ border-top:1px solid var(--line); }
+.visit .wrap{ display:grid; gap:40px; }
+@media (min-width:900px){ .visit .wrap{ grid-template-columns:5fr 6fr; gap:72px; align-items:start; } }
+.info{ margin:28px 0 0; }
+.info div{ display:grid; grid-template-columns:72px 1fr; gap:12px; padding:16px 0; border-top:1px solid var(--line); }
+.info div:last-child{ border-bottom:1px solid var(--line); }
+.info dt{ font-weight:600; }
+.info dd{ margin:0; color:var(--soft); }
+.info dd small{ display:block; margin-top:4px; font-size:.88rem; }
+.hours{ display:grid; grid-template-columns:auto 1fr; gap:2px 16px; }
+.hours span:nth-child(even){ font-family:var(--mono); font-size:.92rem; }
+.visit .cta{ margin-top:24px; display:flex; flex-wrap:wrap; gap:8px; }
+.map{ width:100%; aspect-ratio:4/3; border:0; border-radius:var(--r); background:#EEEEEC; }
+
+/* 푸터 */
+.foot{ background:var(--night); color:var(--night-ink); text-align:center; padding:60px 0 calc(110px + env(safe-area-inset-bottom)); font-size:.88rem; }
+@media (min-width:900px){ .foot{ padding:76px 0; } }
+.foot img{ width:110px; margin:0 auto 20px; }
+.foot p + p{ margin-top:6px; }
+.foot .muted{ color:var(--night-soft); }
+.foot a{ text-decoration:underline; text-underline-offset:3px; }
+
+/* 모바일 하단 바 (불투명) */
+.quick{ position:fixed; left:0; right:0; bottom:0; z-index:60; display:grid; grid-template-columns:1.5fr 1fr 1fr; gap:6px; padding:8px 10px calc(8px + env(safe-area-inset-bottom)); background:var(--paper); border-top:1px solid var(--line); }
+.quick a{ display:flex; align-items:center; justify-content:center; min-height:48px; border:1.5px solid var(--ink); border-radius:var(--r); font-size:.88rem; font-weight:600; background:var(--paper); }
+.quick a.fill{ background:var(--red); border-color:var(--red); color:#FFF; }
+@media (min-width:900px){ .quick{ display:none; } }
+
+/* 리빌: setInterval 구동 */
+.js .reveal{ opacity:0; transform:translateY(16px); transition:opacity .5s ease, transform .5s cubic-bezier(.2,.7,.2,1); transition-delay:var(--d,0s); }
+.js .reveal.in{ opacity:1; transform:none; }
+@media print{ .js .reveal{ opacity:1; transform:none; } }
+</style>
+<noscript><style>.reveal{ opacity:1 !important; transform:none !important; }</style></noscript>
+<script>document.documentElement.classList.add('js');</script>
+</head>
+<body>
+<header class="site-head">
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="기린하우스 처음으로"><img src="gh-word.webp" alt="girin haus" width="560" height="424" /></a>
+    <nav class="nav" aria-label="주요 메뉴"><a href="#day">커피</a><a href="#night">와인</a><a href="#space">공간</a><a href="#visit">오시는 길</a></nav>
+    <a class="btn fill head-cta" href="https://map.naver.com/p/entry/place/2089571955" target="_blank" rel="noopener">네이버 길찾기</a>
+  </div>
+</header>
+
+<main id="top">
+  <section class="hero">
+    <div class="wrap">
+      <div class="reveal">
+        <p class="mono">Specialty Coffee &amp; Natural Wine · Cheongju</p>
+        <h1>낮에는 커피,<br />밤에는 <em>와인</em></h1>
+        <p class="lead">청주 흥덕구 코너 건물 1층. 낮에는 스페셜티 커피를, 해가 지면 내추럴 와인을 내는 기린하우스입니다.</p>
+        <div class="cta">
+          <a class="btn fill" href="https://map.naver.com/p/entry/place/2089571955" target="_blank" rel="noopener">네이버 길찾기</a>
+          <a class="btn" href="#visit">영업시간 보기</a>
+        </div>
+      </div>
+      <div class="pair reveal">
+        <figure><img src="gh-day.webp" alt="햇빛이 드는 원목 테이블 위의 아이스 커피" width="1080" height="1437" fetchpriority="high" /><figcaption class="mono"><span>Day</span><span>09:00</span></figcaption></figure>
+        <figure><img src="gh-night.webp" alt="조명 아래 와인잔이 놓인 저녁의 바 테이블" width="752" height="1008" /><figcaption class="mono"><span>Night</span><span>23:00</span></figcaption></figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" id="day" aria-labelledby="day-h">
+    <div class="wrap">
+      <div class="head reveal">
+        <div><p class="mono">Day · 09:00 ~</p><h2 id="day-h" class="h2">스페셜티 커피</h2></div>
+        <p class="desc">월요일부터 목요일까지는 아침 9시에 문을 열어요. 커피와 말차, 포카치아 플레이트와 디저트를 준비해요.</p>
+      </div>
+      <div class="day-grid">
+        <figure class="card reveal"><img src="gh-coupe.webp" alt="굽 높은 쿠페 잔에 담긴 커피" width="900" height="816" loading="lazy" /><figcaption>커피</figcaption></figure>
+        <figure class="card reveal"><img src="gh-matcha.webp" alt="긴 유리잔에 층이 진 말차 라떼" width="900" height="1200" loading="lazy" /><figcaption>말차 라떼</figcaption></figure>
+        <figure class="card reveal"><img src="gh-focaccia.webp" alt="포카치아와 햄, 치즈, 삶은 달걀이 담긴 접시" width="900" height="1200" loading="lazy" /><figcaption>포카치아 플레이트</figcaption></figure>
+        <figure class="card reveal"><img src="gh-dessert.webp" alt="크림과 초콜릿을 올린 디저트를 숟가락으로 뜨는 모습" width="900" height="1200" loading="lazy" /><figcaption>디저트</figcaption></figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec night" id="night" aria-labelledby="night-h">
+    <div class="wrap">
+      <div class="night-head reveal">
+        <img class="mark" src="gh-mark-w.webp" alt="와인잔 안에 girin haus 글씨를 그린 로고" width="416" height="660" loading="lazy" />
+        <div>
+          <p class="mono">Night · ~ 23:00</p>
+          <h2 id="night-h" class="h2">내추럴 와인</h2>
+          <p class="desc">해가 지면 와인잔을 꺼내요. 금요일과 토요일은 밤 11시까지. 내추럴 와인 한 잔에 디저트를 곁들여 천천히 머물다 가세요.</p>
+        </div>
+      </div>
+      <div class="night-grid">
+        <figure class="w reveal"><img src="gh-window.webp" alt="창가 테이블에 놓인 와인 두 잔" width="1080" height="810" loading="lazy" /></figure>
+        <figure class="s s1 reveal"><img src="gh-wine.webp" alt="둥근 조명 아래 원목 테이블의 와인 병과 빈 잔" width="900" height="1200" loading="lazy" /></figure>
+        <figure class="s s2 reveal"><img src="gh-red.webp" alt="빨간 바탕 위 꽃잎 접시에 담긴 초콜릿 디저트" width="900" height="1200" loading="lazy" /></figure>
+        <figure class="s s3 reveal"><img src="gh-bar.webp" alt="와인 병과 커피 도구가 놓인 저녁의 바" width="900" height="1200" loading="lazy" /></figure>
+      </div>
+      <div class="events reveal">
+        <p><b>가끔은 모임이 열려요.</b> 와인과 아이스크림, 전시와 DJ 세트가 있는 밤. 소식은 인스타그램에서 확인해 주세요.</p>
+        <a href="https://www.instagram.com/girin_haus/" target="_blank" rel="noopener">@girin_haus</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" id="space" aria-labelledby="space-h">
+    <div class="wrap">
+      <div class="head reveal">
+        <div><p class="mono">Space · Haus</p><h2 id="space-h" class="h2">코너의 작은 집</h2></div>
+        <p class="desc">큰 창으로 햇빛이 드는 코너 건물 1층. 빨간 의자와 커다란 조명 아래에서 쉬어 가세요.</p>
+      </div>
+      <div class="space-grid">
+        <figure class="reveal"><img src="gh-lounge.webp" alt="큰 펜던트 조명과 라운지 의자, 벽에 기댄 그림" width="900" height="1198" loading="lazy" /></figure>
+        <figure class="reveal"><img src="gh-chair.webp" alt="통유리 창가의 빨간 의자" width="900" height="1200" loading="lazy" /></figure>
+        <figure class="reveal"><img src="gh-lamp.webp" alt="원목 테이블 위 둥근 조명과 꽃병" width="900" height="1200" loading="lazy" /></figure>
+        <figure class="reveal"><img src="gh-corner.webp" alt="흰 외벽의 코너 건물 1층 매장 외관" width="1080" height="1440" loading="lazy" /></figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec visit" id="visit" aria-labelledby="visit-h">
+    <div class="wrap">
+      <div class="reveal">
+        <p class="mono">Visit</p>
+        <h2 id="visit-h" class="h2">오시는 길</h2>
+        <dl class="info">
+          <div><dt>주소</dt><dd>충북 청주시 흥덕구 흥덕로162번길 45 1층<small>코너 건물</small></dd></div>
+          <div><dt>영업</dt><dd><span class="hours"><span>월~목</span><span>09:00 ~ 21:00</span><span>금·토</span><span>12:00 ~ 23:00</span><span>일</span><span>12:00 ~ 21:00</span></span></dd></div>
+          <div><dt>전화</dt><dd><a href="tel:050713531766">0507-1353-1766</a></dd></div>
+        </dl>
+        <div class="cta">
+          <a class="btn fill" href="https://map.naver.com/p/entry/place/2089571955" target="_blank" rel="noopener">네이버 길찾기</a>
+          <a class="btn" href="https://www.instagram.com/girin_haus/" target="_blank" rel="noopener">인스타그램</a>
+        </div>
+      </div>
+      <iframe class="map reveal" title="기린하우스 위치 지도" src="https://www.google.com/maps?q=%EC%B6%A9%EB%B6%81%20%EC%B2%AD%EC%A3%BC%EC%8B%9C%20%ED%9D%A5%EB%8D%95%EA%B5%AC%20%ED%9D%A5%EB%8D%95%EB%A1%9C162%EB%B2%88%EA%B8%B8%2045&amp;output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+  </section>
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <img src="gh-word-w.webp" alt="" width="560" height="424" loading="lazy" />
+    <p>낮에는 커피, 밤에는 와인</p>
+    <p class="muted">충북 청주시 흥덕구 흥덕로162번길 45 1층 · 0507-1353-1766 · <a href="https://www.instagram.com/girin_haus/" target="_blank" rel="noopener">@girin_haus</a></p>
+    <p class="muted">© girin haus</p>
+  </div>
+</footer>
+
+<div class="quick" aria-label="빠른 연결">
+  <a class="fill" href="https://map.naver.com/p/entry/place/2089571955" target="_blank" rel="noopener">길찾기</a>
+  <a href="tel:050713531766">전화</a>
+  <a href="https://www.instagram.com/girin_haus/" target="_blank" rel="noopener">인스타</a>
+</div>
+
+<script>
+(function(){
+  /* 리빌 */
+  var pending=[].slice.call(document.querySelectorAll('.reveal'));
+  pending.forEach(function(el){
+    var sib=[].slice.call(el.parentNode.children).filter(function(c){ return c.classList.contains('reveal'); });
+    if(sib.length>1 && !el.style.getPropertyValue('--d')){ el.style.setProperty('--d',(Math.min(sib.indexOf(el),4)*0.06)+'s'); }
+  });
+  var t=setInterval(function(){
+    if(!pending.length){ clearInterval(t); return; }
+    if(window.innerHeight + window.pageYOffset >= document.documentElement.scrollHeight - 4){
+      pending.forEach(function(el){ el.classList.add('in'); }); pending=[]; return;
+    }
+    var line=window.innerHeight*0.92;
+    pending=pending.filter(function(el){
+      if(el.getBoundingClientRect().top < line){ el.classList.add('in'); return false; }
+      return true;
+    });
+  },120);
+  /* 앵커 스크롤 */
+  var head=document.querySelector('.site-head');
+  [].forEach.call(document.querySelectorAll('a[href^="#"]'),function(a){
+    a.addEventListener('click',function(e){
+      var id=a.getAttribute('href'); var el=id==='#top'?document.body:document.querySelector(id);
+      if(!el) return; e.preventDefault();
+      var start=window.pageYOffset, end=id==='#top'?0:el.getBoundingClientRect().top+start-head.offsetHeight+1;
+      var t0=Date.now(), dur=520;
+      var iv=setInterval(function(){
+        var p=Math.min((Date.now()-t0)/dur,1), e2=p<.5?2*p*p:1-Math.pow(-2*p+2,2)/2;
+        window.scrollTo(0,start+(end-start)*e2);
+        if(p>=1) clearInterval(iv);
+      },16);
+    });
+  });
+})();
+</script>
+</body>
+</html>
